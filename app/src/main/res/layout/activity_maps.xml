@@ -1,0 +1,63 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/button_frame"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="80dp">
+
+        <Button
+            android:text="DROP A BREADCRUMB"
+            android:id="@+id/location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="20"
+            android:textSize="10dp"
+            android:orientation="horizontal"/>
+
+        <Button
+            android:text="CLEAR BREADCRUMBS"
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="20"
+            android:textSize="10dp"
+            android:orientation="horizontal"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_follow"
+            android:textOn="FOLLOW ME"
+            android:textOff="FOLLOW ME"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="20"
+            android:orientation="horizontal"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_breadcrumbs"
+            android:textOn="DROP BREADCRUMBS"
+            android:textOff="DROP BREADCRUMBS"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="20"
+            android:textSize="10dp"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:layout_below="@+id/button_frame"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.temple.breadcrumblab.MapsActivity" />
+
+</RelativeLayout>
